@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="scoreViewModel"
+            type="dev.yudha.kabaddiprojek.ScoreViewModel" />
+    </data>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -50,7 +59,7 @@
                 android:id="@+id/scoreTeamA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@{Integer.toString(scoreViewModel.scoreA)}"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -97,7 +106,7 @@
                 android:id="@+id/scoreTeamB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@{Integer.toString(scoreViewModel.scoreB)}"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -126,3 +135,5 @@
         android:text="RESET"
         android:layout_marginTop="16dp" />
 </LinearLayout>
+
+</layout>
